@@ -24,21 +24,14 @@
     h1 { font-size: 1.55rem; margin: 0 0 12px; }
     h2 { font-size: 1.15rem; margin: 28px 0 10px; border-bottom: 1px solid #e8ebf0; padding-bottom: 6px; }
     p, li { font-size: 0.96rem; }
-    ol { padding-left: 1.3rem; }
+    ol, ul { padding-left: 1.3rem; }
     table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 12px 0; }
     th, td { border: 1px solid #dde2ea; padding: 8px 10px; text-align: left; vertical-align: top; }
     th { background: #f3f5f8; width: 36%; }
-    .notice {
-      background: #fff8e6;
-      border: 1px solid #f0d78c;
-      border-radius: 8px;
-      padding: 12px 14px;
-      font-size: 0.92rem;
-      margin: 16px 0 24px;
-    }
     .nav { margin-bottom: 16px; font-size: 0.9rem; }
     .nav a { color: #1a3f8f; }
     footer { margin-top: 24px; font-size: 0.85rem; color: #777; }
+    a { color: #1a3f8f; }
   </style>
 </head>
 <body>
@@ -46,38 +39,42 @@
     <p class="nav"><a href="index.html">← Legal / Policy トップ</a></p>
     <div class="card">
       <h1>利用規約</h1>
-      <p>Daily Shadowing（デイリー・シャドーイング）— 無料β版</p>
+      <p>Daily Shadowing（デイリー・シャドーイング）</p>
 
       <h2>第1条（適用）</h2>
       <p>本利用規約（以下「本規約」）は、運営者が提供するモバイルアプリケーション「Daily Shadowing」（以下「本アプリ」）の利用条件を定めるものです。ユーザーは、本アプリを利用することにより、本規約に同意したものとみなします。</p>
 
       <h2>第2条（サービス内容）</h2>
       <p>本アプリは、英語シャドーイング学習を支援するため、短い英語教材の表示、音声再生、日本語訳・語彙の表示等の機能を提供します。</p>
-      <p>無料β版では、各レベル（初級・中級・上級）の当日教材を無料で利用できます。</p>
+      <p>教材・音声の取得にはインターネット通信が必要です。端末内に offline JSON cache（オフライン用のキャッシュ）を保持する場合がありますが、<strong>すべての教材・音声の完全なオフライン利用を保証するものではありません</strong>。</p>
+      <p>教材は原則として毎日配信しますが、配信の遅延・一時停止・内容変更の可能性があります。</p>
 
-      <h2>第3条（無料β版について）</h2>
+      <h2>第3条（Free と Premium）</h2>
+      <table>
+        <tr><th>機能</th><th>Free</th><th>Premium</th></tr>
+        <tr><td>今日の教材</td><td>利用可</td><td>利用可</td></tr>
+        <tr><td>過去教材</td><td>ロック（Paywall へ誘導）</td><td>利用可</td></tr>
+        <tr><td>前面での音声再生・文ごと再生・リピート・速度変更</td><td>利用可</td><td>利用可</td></tr>
+        <tr><td>バックグラウンド再生（画面ロック / 他アプリ使用中）</td><td>不可（停止）</td><td>利用可</td></tr>
+      </table>
+      <p>機能の詳細表示はアプリ内の案内および購入画面の表示に従います。</p>
+
+      <h2>第4条（有料サブスクリプション）</h2>
       <ol>
-        <li>本アプリは、現時点で<strong>無料β版</strong>として提供されます。</li>
-        <li>無料β版では、<strong>実課金・広告はありません</strong>。</li>
-        <li>無料β版の機能・教材・表示は、予告なく変更・追加・停止される場合があります。</li>
-        <li>無料β版は、正式版リリース前の検証を目的とするものであり、動作の安定性や継続提供を保証するものではありません。</li>
+        <li>Premium は、<strong>月額の自動更新サブスクリプション</strong>として提供されます。商品名・期間・価格はアプリ内の購入画面に表示される内容に従います。</li>
+        <li>価格・表示通貨は、<strong>購入画面に表示される内容</strong>に従います。地域・時期により異なる場合があります。</li>
+        <li>iOS における課金処理は <strong>Apple StoreKit</strong> および <strong>RevenueCat</strong> を通じて行われ、購読状態（エンタイトルメント）をアプリに反映します。</li>
+        <li>期間終了前に解約しない限り、サブスクリプションは自動更新されます。</li>
+        <li>管理・解約は、ユーザーの <strong>Apple Account</strong>（App Store のサブスクリプション管理）から行えます（<a href="https://apps.apple.com/account/subscriptions" rel="noopener noreferrer" target="_blank">サブスクリプションの管理はこちら</a>）。</li>
+        <li>機種変更等の際は、アプリ内の<strong>購入を復元</strong>機能により Premium 状態を回復できる場合があります。</li>
+        <li>返金・請求に関する手続は、<strong>Apple の返金・課金ポリシーおよび手続</strong>に従います。運営者がクレジットカード情報を取得することはありません。</li>
+        <li>Android 版など、課金が未対応の環境では Premium 購入が利用できない場合があります。</li>
       </ol>
 
-      <h2>第4条（未実装機能）</h2>
-      <p>以下の機能は、現時点では<strong>提供していません</strong>。</p>
-      <table>
-        <tr><th>機能</th><th>状態</th></tr>
-        <tr><td>実課金・サブスクリプション</td><td>未実装</td></tr>
-        <tr><td>広告</td><td>未実装</td></tr>
-        <tr><td>ログイン UI</td><td>未提供</td></tr>
-        <tr><td>録音機能</td><td>未実装</td></tr>
-        <tr><td>AI 採点</td><td>未実装</td></tr>
-        <tr><td>バックグラウンド再生</td><td>未実装（将来 Premium 候補）</td></tr>
-        <tr><td>過去教材の実利用（無料）</td><td>未提供（将来 Premium 候補）</td></tr>
-      </table>
-      <p>Premium と表示される教材・機能は、<strong>将来提供予定</strong>であり、現時点では利用できない場合があります。</p>
+      <h2>第5条（アカウント）</h2>
+      <p>本アプリは独自ログインを提供しません。Premium の状態管理には RevenueCat の匿名 App User ID 等を利用します。</p>
 
-      <h2>第5条（禁止事項）</h2>
+      <h2>第6条（禁止事項）</h2>
       <ol>
         <li>法令または公序良俗に違反する行為</li>
         <li>本アプリの教材・音声・UI 等を、無断で複製・転載・再配布・販売する行為</li>
@@ -86,51 +83,52 @@
         <li>その他、運営者が不適切と判断する行為</li>
       </ol>
 
-      <h2>第6条（知的財産権）</h2>
+      <h2>第7条（知的財産権）</h2>
       <p>本アプリに含まれる教材テキスト、音声、画像、UI、プログラム等に関する著作権その他の知的財産権は、運営者または正当な権利者に帰属します。</p>
 
-      <h2>第7条（教材・音声の扱い）</h2>
+      <h2>第8条（教材・音声の扱い）</h2>
       <ol>
         <li>ユーザーは、本アプリの教材・音声を<strong>個人の学習目的</strong>の範囲で利用できます。</li>
         <li>教材・音声の無断転載、再配布、商用利用、二次利用は禁止します。</li>
         <li>教材の英文は運営者が作成したオリジナルコンテンツであり、外部記事・ニュース本文・外部音声素材の転載は行っていません。</li>
+        <li>教材内容は語学学習のための例示であり、<strong>法律・医療・投資その他の専門的助言ではありません</strong>。</li>
       </ol>
 
-      <h2>第8条（免責事項）</h2>
+      <h2>第9条（免責事項）</h2>
       <ol>
         <li>運営者は、本アプリの利用によりユーザーが得る学習効果・試験結果・語学力向上等を<strong>保証しません</strong>。</li>
-        <li>運営者は、無料β版の性質上、本アプリの完全性・正確性・有用性・継続性を保証しません。</li>
+        <li>運営者は、本アプリの完全性・正確性・有用性・継続性を保証しません。</li>
         <li>本アプリの利用または利用不能により生じた損害について、運営者に故意または重過失がある場合を除き、運営者は責任を負いません。</li>
-        <li>端末の故障、通信環境、OS の仕様変更等により本アプリが正常に動作しない場合があることを、ユーザーは予め承諾するものとします。</li>
+        <li>端末の故障、通信環境、OS の仕様変更、外部配信（GitHub Pages 等）の障害等により、本アプリが正常に動作しない場合があることを、ユーザーは予め承諾するものとします。</li>
       </ol>
 
-      <h2>第9条（サービス変更・停止）</h2>
+      <h2>第10条（サービス変更・停止）</h2>
       <p>運営者は、ユーザーへの事前通知の有無にかかわらず、本アプリの内容変更、一時停止、終了を行うことがあります。</p>
 
-      <h2>第10条（利用停止）</h2>
+      <h2>第11条（利用停止）</h2>
       <p>ユーザーが本規約に違反した場合、運営者は事前の通知なく、当該ユーザーによる本アプリの利用を停止できるものとします。</p>
 
-      <h2>第11条（規約変更）</h2>
+      <h2>第12条（規約変更）</h2>
       <p>運営者は、必要に応じて本規約を変更できます。変更後の規約は、公開した時点から効力を生じます。重要な変更がある場合は、アプリ内またはストア掲載情報で告知します。</p>
 
-      <h2>第12条（準拠法・裁判管轄）</h2>
+      <h2>第13条（準拠法・裁判管轄）</h2>
       <p>本規約の準拠法および裁判管轄は、<strong>日本法・東京地方裁判所</strong> とします。</p>
 
-      <h2>第13条（問い合わせ先）</h2>
+      <h2>第14条（問い合わせ先）</h2>
       <table>
         <tr><th>運営者</th><td>Daily Shadowing 運営チーム</td></tr>
         <tr><th>問い合わせ先</th><td><a href="mailto:daily.shadowing.app@gmail.com">daily.shadowing.app@gmail.com</a></td></tr>
-        <tr><th>サポート URL</th><td><a href="https://shoya9696.github.io/daily-shadowing-legal/">https://shoya9696.github.io/daily-shadowing-legal/</a></td></tr>
+        <tr><th>サポート URL</th><td><a href="https://shoya9696.github.io/daily-shadowing-legal/support.html">https://shoya9696.github.io/daily-shadowing-legal/support.html</a></td></tr>
       </table>
 
-      <h2>第14条（制定日・改定日）</h2>
+      <h2>第15条（制定日・改定日）</h2>
       <table>
         <tr><th>制定日</th><td>2026年6月20日</td></tr>
-        <tr><th>最終改定日</th><td>2026年6月20日</td></tr>
+        <tr><th>最終改定日</th><td>2026年7月14日</td></tr>
       </table>
     </div>
     <footer>
-      <p><a href="index.html">Legal / Policy トップ</a> · Daily Shadowing</p>
+      <p><a href="index.html">Legal / Policy トップ</a> · <a href="support.html">サポート</a> · <a href="privacy-policy.html">プライバシーポリシー</a></p>
     </footer>
   </div>
 </body>

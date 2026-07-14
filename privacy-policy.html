@@ -29,17 +29,10 @@
     table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 12px 0; }
     th, td { border: 1px solid #dde2ea; padding: 8px 10px; text-align: left; vertical-align: top; }
     th { background: #f3f5f8; width: 28%; }
-    .notice {
-      background: #fff8e6;
-      border: 1px solid #f0d78c;
-      border-radius: 8px;
-      padding: 12px 14px;
-      font-size: 0.92rem;
-      margin: 16px 0 24px;
-    }
     .nav { margin-bottom: 16px; font-size: 0.9rem; }
     .nav a { color: #1a3f8f; }
     footer { margin-top: 24px; font-size: 0.85rem; color: #777; }
+    a { color: #1a3f8f; }
   </style>
 </head>
 <body>
@@ -47,111 +40,108 @@
     <p class="nav"><a href="index.html">← Legal / Policy トップ</a></p>
     <div class="card">
       <h1>プライバシーポリシー</h1>
-      <p>Daily Shadowing（デイリー・シャドーイング）— 無料β版</p>
+      <p>Daily Shadowing（デイリー・シャドーイング）</p>
 
       <h2>1. アプリ名</h2>
       <p>Daily Shadowing（デイリー・シャドーイング）</p>
 
       <h2>2. 適用範囲</h2>
       <p>本プライバシーポリシー（以下「本ポリシー」）は、運営者が提供するモバイルアプリケーション「Daily Shadowing」（以下「本アプリ」）の利用に関して適用されます。</p>
-      <p>本ポリシーは、<strong>無料β版</strong>を対象とします。将来、有料機能・ログイン・広告等を追加する場合は、本ポリシーを改定します。</p>
+      <p>本ポリシーは、Free 機能および Premium（有料サブスクリプション）機能を含む現行版を対象とします。サービス内容の変更がある場合は、本ポリシーを改定します。</p>
 
-      <h2>3. 取得する情報</h2>
-      <p>現時点の無料β版において、運営者は<strong>ユーザーから氏名・メールアドレス・電話番号などの個人情報を取得しません</strong>。</p>
-      <p>本アプリにユーザー登録画面はなく、ユーザーが個人情報を入力するフォームも提供していません。</p>
+      <h2>3. 独自アカウントについて</h2>
+      <p>本アプリは、<strong>独自のユーザー登録・ログイン機能を提供しません</strong>。氏名・パスワード等を入力するアカウント作成画面はありません。</p>
+      <p>iOS の Premium 購入・復元では、Apple のアカウントおよび課金基盤（StoreKit）と RevenueCat を利用します。RevenueCat は、独自ログインなしでも動作する<strong>匿名の App User ID</strong>を用いて、購入状態（エンタイトルメント）を管理します。</p>
 
-      <h2>4. 取得しない情報</h2>
-      <p>無料β版では、以下の情報を<strong>意図的に取得しません</strong>。</p>
+      <h2>4. 運営者が取り扱う・取り扱わない情報</h2>
+      <h3>4.1 問い合わせによりお送りいただく情報</h3>
+      <p>サポート用メール（daily.shadowing.app@gmail.com）へご連絡いただく場合、メールアドレス、お名前（任意）、端末情報、OS、アプリバージョン、問い合わせ内容など、あなたが記載した情報が運営者に届きます。これらは問い合わせ対応の目的でのみ使用します。</p>
+
+      <h3>4.2 課金・サブスクリプション関連（iOS）</h3>
+      <p>Premium の購入・復元・購読状態の確認にあたり、次の処理が行われます。</p>
+      <ul>
+        <li><strong>Apple StoreKit</strong>：Apple の課金システムによる購入処理。クレジットカード番号などの支払い手段は Apple が処理し、<strong>運営者がクレジットカード番号を取得・保管することはありません</strong>。</li>
+        <li><strong>RevenueCat</strong>：購読状態の管理・購入復元のために利用します。RevenueCat は匿名 App User ID、購入・エンタイトルメント情報、端末・OS・アプリに関する技術情報などを処理する場合があります。詳細は <a href="https://www.revenuecat.com/privacy" rel="noopener noreferrer" target="_blank">RevenueCat のプライバシーポリシー</a>もご参照ください。</li>
+      </ul>
+      <p>運営者は、課金可否や Premium 状態をアプリ上で反映するために、RevenueCat / Apple 経由で得られる購読関連情報を利用します。運営者が決済カード情報を直接取得する仕組みはありません。</p>
+
+      <h3>4.3 現状取得していない・利用していないもの</h3>
       <table>
         <tr><th>区分</th><th>内容</th></tr>
-        <tr><td>登録情報</td><td>氏名、メールアドレス、電話番号、住所等</td></tr>
-        <tr><td>音声・録音</td><td>ユーザーの声の録音データ（録音機能なし）</td></tr>
-        <tr><td>学習採点</td><td>AI 採点結果、発話解析データ（AI 採点機能なし）</td></tr>
-        <tr><td>位置情報</td><td>GPS 等による位置情報</td></tr>
-        <tr><td>連絡先</td><td>連絡先一覧</td></tr>
-        <tr><td>メディア</td><td>写真、カメラ、マイクによる収集データ</td></tr>
-        <tr><td>課金情報</td><td>クレジットカード番号等（実課金機能なし）</td></tr>
-        <tr><td>広告識別子</td><td>広告 SDK によるトラッキングデータ（広告なし）</td></tr>
-        <tr><td>行動分析</td><td>解析 SDK による利用行動の送信（解析 SDK なし）</td></tr>
+        <tr><td>登録フォーム</td><td>氏名・電話番号・住所等の登録画面</td></tr>
+        <tr><td>録音・マイク</td><td>ユーザー音声の録音・マイク権限の要求</td></tr>
+        <tr><td>AI 採点</td><td>発話解析・採点データの収集</td></tr>
+        <tr><td>位置情報</td><td>GPS 等</td></tr>
+        <tr><td>連絡先・写真・カメラ</td><td>端末メディアへのアクセス</td></tr>
+        <tr><td>広告・トラッキング</td><td>広告 SDK、広告識別子による追跡</td></tr>
+        <tr><td>Analytics</td><td>firebase_analytics などの行動解析 SDK（いずれも未導入）</td></tr>
       </table>
 
       <h2>5. 利用目的</h2>
-      <p>無料β版では、ユーザーから個人情報を取得しないため、個人情報の利用目的は該当しません。</p>
-      <p>本アプリは、端末内に同梱された教材データを用いて、英語シャドーイング学習を支援することを目的とします。</p>
-
-      <h2>6. 第三者提供</h2>
-      <p>運営者は、無料β版において、ユーザーの個人情報を第三者に提供しません。</p>
-
-      <h2>7. 外部送信</h2>
-      <h3>教材・音声データ</h3>
-      <p>教材テキスト・音声ファイルはアプリ内に同梱されており、学習のために端末上で読み込まれます。ユーザーが学習する内容を運営者のサーバーへ送信する機能はありません。</p>
-      <h3>Firebase について</h3>
-      <p>本アプリには、将来機能のため <strong>Firebase Core / Firebase Auth</strong> の依存関係および設定が含まれています。</p>
-      <p>ただし、無料β版では次のとおりです。</p>
       <ul>
-        <li>ユーザー登録・ログイン画面を<strong>提供していません</strong></li>
-        <li>ユーザーが操作して Firebase Auth に認証情報を送信する導線は<strong>ありません</strong></li>
-        <li>Firestore、Firebase Storage、Cloud Functions は<strong>使用していません</strong></li>
-        <li><code>firebase_analytics</code> は<strong>未導入</strong>（依存関係に含まれていません）</li>
-        <li>広告 SDK・行動分析 SDK は<strong>未導入</strong>です</li>
-      </ul>
-      <p>アプリ起動時に Firebase Core の初期化処理が実行される場合がありますが、無料β版ではログイン UI を提供しておらず、ユーザーが入力した個人情報を運営者が取得する機能はありません。</p>
-      <h3>単語読み上げ（TTS）</h3>
-      <p>語彙の読み上げには、端末 OS の TTS（Text-to-Speech）機能を利用します。読み上げ処理は端末上で行われ、運営者がユーザーの音声データを収集するものではありません。</p>
-
-      <h2>8. 広告・解析ツール</h2>
-      <p>無料β版では、以下を<strong>使用していません</strong>。</p>
-      <ul>
-        <li>広告 SDK（AdMob 等）</li>
-        <li>課金 SDK（RevenueCat 等）</li>
-        <li>行動分析 SDK（<code>firebase_analytics</code>、Google Analytics 等）※いずれも未導入</li>
-        <li>クラッシュレポート SDK（Crashlytics 等）※導入時は本ポリシーを改定</li>
+        <li>英語シャドーイング学習機能の提供（教材表示、音声再生、語彙表示等）</li>
+        <li>Free / Premium の機能差に基づくアクセス制御（今日の教材、過去教材、バックグラウンド再生等）</li>
+        <li>購入・復元・サブスクリプション状態の確認</li>
+        <li>問い合わせ対応</li>
+        <li>サービス改善・不正防止・障害対応（必要な範囲）</li>
       </ul>
 
-      <h2>9. ログイン・認証</h2>
-      <p>無料β版では、ログイン UI を表示せず、ユーザー登録を行いません。</p>
-      <p>Firebase Auth 関連のコードは将来の Premium・同期等のためにリポジトリに含まれる場合がありますが、無料β版の通常利用では認証機能は提供されません。</p>
+      <h2>6. 外部送信・第三者サービス</h2>
+      <h3>6.1 教材・音声の配信</h3>
+      <p>教材 JSON および音声ファイルは、<strong>GitHub Pages 上のコンテンツ配信</strong>から取得します。アプリは学習のためにこれらのデータを端末へダウンロードします。あわせて、端末内に <strong>offline JSON cache</strong>（オフライン用のキャッシュ）を保持する場合があります。キャッシュは利便性のためのものであり、<strong>すべての教材・音声の完全なオフライン利用を保証するものではありません</strong>。</p>
 
-      <h2>10. 音声・録音データ</h2>
+      <h3>6.2 RevenueCat / Apple</h3>
+      <p>上記 4.2 のとおり、課金関連の処理のために Apple および RevenueCat のサービスと通信する場合があります。</p>
+
+      <h3>6.3 Firebase</h3>
+      <p>本アプリには Firebase Core / Firebase Auth の依存関係が含まれています。ただし、<strong>独自のログイン UI は提供しておらず</strong>、ユーザーが操作して認証情報を送信する導線はありません。Firestore、Firebase Storage、Cloud Functions、firebase_analytics は使用していません。</p>
+
+      <h3>6.4 単語読み上げ（TTS）</h3>
+      <p>語彙の読み上げには端末 OS の TTS 機能を利用することがあります。読み上げ処理は端末上で行われ、運営者がユーザーの声を収集するものではありません。</p>
+
+      <h2>7. 第三者提供</h2>
+      <p>運営者は、法令に基づく場合を除き、問い合わせメール等であなたから受領した個人情報を、本人の同意なく第三者に販売・提供しません。</p>
+      <p>課金処理のために Apple および RevenueCat が各自のサービスとして情報を処理する場合があります。各社の取扱いは各社のポリシーに従います。</p>
+
+      <h2>8. 音声・録音データ</h2>
       <ul>
-        <li><strong>録音機能はありません</strong></li>
+        <li>録音機能はありません</li>
         <li>ユーザーの声を録音・収集・送信する機能はありません</li>
         <li>マイク権限は要求しません</li>
       </ul>
 
-      <h2>11. 教材データ</h2>
+      <h2>9. 教材データ</h2>
       <ul>
         <li>英文は運営者が作成したオリジナルコンテンツです</li>
-        <li>外部ニュース記事・外部教材の転載は行っていません</li>
-        <li>音声は運営者が TTS で生成したものを同梱しており、外部音声素材の転載は行っていません</li>
+        <li>外部ニュース記事本文・外部教材の転載は行っていません</li>
+        <li>音声は運営者が TTS 等で生成し、GitHub Pages 経由で配信します</li>
       </ul>
 
-      <h2>12. 子どもの利用</h2>
-      <p>本アプリは、英語学習を目的とした一般向けアプリです。<strong>13 歳未満のユーザーを主要な対象として設計していません。</strong></p>
-      <p>子どもが利用する場合は、保護者の監督のもとでご利用ください。</p>
-      <p>将来、グローバル展開や子ども向け（Kids）提供を行う場合は、各国の法令（COPPA 等）に応じて本ポリシーを見直します。</p>
+      <h2>10. 子どもの利用</h2>
+      <p>本アプリは一般向けの英語学習アプリです。<strong>13 歳未満のユーザーを主要な対象として設計していません。</strong>子どもが利用する場合は、保護者の監督のもとでご利用ください。</p>
 
-      <h2>13. ユーザーの権利</h2>
-      <p>無料β版では、運営者がユーザーの個人情報を保有しないため、開示・訂正・削除等の請求の対象となる個人情報は原則として存在しません。</p>
+      <h2>11. ユーザーの権利</h2>
+      <p>問い合わせメール等で運営者が保有する個人情報について、開示・訂正・削除等のご請求がある場合は、下記問い合わせ先までご連絡ください。合理的な範囲で対応します。</p>
+      <p>Apple アカウント上の購入履歴・サブスクリプション管理については、Apple の手続に従ってください。</p>
 
-      <h2>14. ポリシー変更</h2>
-      <p>運営者は、法令の変更やサービス内容の変更に応じて、本ポリシーを変更することがあります。重要な変更がある場合は、アプリ内通知やストア掲載情報等でお知らせします。</p>
+      <h2>12. ポリシー変更</h2>
+      <p>運営者は、法令やサービス内容の変更に応じて本ポリシーを変更することがあります。重要な変更がある場合は、アプリ内通知やストア掲載情報等でお知らせします。</p>
 
-      <h2>15. 問い合わせ先</h2>
+      <h2>13. 問い合わせ先</h2>
       <table>
         <tr><th>運営者</th><td>Daily Shadowing 運営チーム</td></tr>
         <tr><th>問い合わせ先</th><td><a href="mailto:daily.shadowing.app@gmail.com">daily.shadowing.app@gmail.com</a></td></tr>
-        <tr><th>サポート URL</th><td><a href="https://shoya9696.github.io/daily-shadowing-legal/">https://shoya9696.github.io/daily-shadowing-legal/</a></td></tr>
+        <tr><th>サポート URL</th><td><a href="https://shoya9696.github.io/daily-shadowing-legal/support.html">https://shoya9696.github.io/daily-shadowing-legal/support.html</a></td></tr>
       </table>
 
-      <h2>16. 制定日・改定日</h2>
+      <h2>14. 制定日・改定日</h2>
       <table>
         <tr><th>制定日</th><td>2026年6月20日</td></tr>
-        <tr><th>最終改定日</th><td>2026年6月20日</td></tr>
+        <tr><th>最終改定日</th><td>2026年7月14日</td></tr>
       </table>
     </div>
     <footer>
-      <p><a href="index.html">Legal / Policy トップ</a> · Daily Shadowing</p>
+      <p><a href="index.html">Legal / Policy トップ</a> · <a href="support.html">サポート</a> · <a href="terms-of-service.html">利用規約</a></p>
     </footer>
   </div>
 </body>
