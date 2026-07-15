@@ -60,8 +60,8 @@
       <h3>4.2 課金・サブスクリプション関連（iOS）</h3>
       <p>Premium の購入・復元・購読状態の確認にあたり、次の処理が行われます。</p>
       <ul>
-        <li><strong>Apple StoreKit</strong>：Apple の課金システムによる購入処理。クレジットカード番号などの支払い手段は Apple が処理し、<strong>運営者がクレジットカード番号を取得・保管することはありません</strong>。</li>
-        <li><strong>RevenueCat</strong>：購読状態の管理・購入復元のために利用します。RevenueCat は匿名 App User ID、購入・エンタイトルメント情報、端末・OS・アプリに関する技術情報などを処理する場合があります。詳細は <a href="https://www.revenuecat.com/privacy" rel="noopener noreferrer" target="_blank">RevenueCat のプライバシーポリシー</a>もご参照ください。</li>
+        <li><strong>Apple StoreKit</strong>：Apple の課金システムによる購入処理。クレジットカード番号などの支払い手段は Apple が処理し、<strong>運営者がクレジットカード番号等の支払情報を取得・保管することはありません</strong>。</li>
+        <li><strong>RevenueCat</strong>：サブスクリプションの購入状態および復元を管理するために利用します。購入履歴（Purchase History）は、サブスクリプション機能の提供（App Functionality）のために処理されます。購入履歴は広告トラッキングには使用しません。RevenueCat は匿名の App User ID、購入・エンタイトルメント情報などを処理する場合があります。詳細は <a href="https://www.revenuecat.com/privacy" rel="noopener noreferrer" target="_blank">RevenueCat のプライバシーポリシー</a>もご参照ください。</li>
       </ul>
       <p>運営者は、課金可否や Premium 状態をアプリ上で反映するために、RevenueCat / Apple 経由で得られる購読関連情報を利用します。運営者が決済カード情報を直接取得する仕組みはありません。</p>
 
@@ -73,8 +73,9 @@
         <tr><td>AI 採点</td><td>発話解析・採点データの収集</td></tr>
         <tr><td>位置情報</td><td>GPS 等</td></tr>
         <tr><td>連絡先・写真・カメラ</td><td>端末メディアへのアクセス</td></tr>
-        <tr><td>広告・トラッキング</td><td>広告 SDK、広告識別子による追跡</td></tr>
-        <tr><td>Analytics</td><td>firebase_analytics などの行動解析 SDK（いずれも未導入）</td></tr>
+        <tr><td>広告・トラッキング</td><td>広告 SDK、広告識別子による追跡、クロスアプリトラッキング</td></tr>
+        <tr><td>専用解析 SDK</td><td>firebase_analytics、Firebase Crashlytics、Performance Monitoring 等の専用 SDK（未導入）</td></tr>
+        <tr><td>Device ID / Crash Data</td><td>端末固有識別子としての Device ID、クラッシュデータの専用収集は行いません</td></tr>
       </table>
 
       <h2>5. 利用目的</h2>
@@ -82,6 +83,7 @@
         <li>英語シャドーイング学習機能の提供（教材表示、音声再生、語彙表示等）</li>
         <li>Free / Premium の機能差に基づくアクセス制御（今日の教材、過去教材、バックグラウンド再生等）</li>
         <li>購入・復元・サブスクリプション状態の確認</li>
+        <li>サービス提供および品質維持のため（SDK が処理する技術的情報を含む）</li>
         <li>問い合わせ対応</li>
         <li>サービス改善・不正防止・障害対応（必要な範囲）</li>
       </ul>
@@ -94,14 +96,20 @@
       <p>上記 4.2 のとおり、課金関連の処理のために Apple および RevenueCat のサービスと通信する場合があります。</p>
 
       <h3>6.3 Firebase</h3>
-      <p>本アプリには Firebase Core / Firebase Auth の依存関係が含まれています。ただし、<strong>独自のログイン UI は提供しておらず</strong>、ユーザーが操作して認証情報を送信する導線はありません。Firestore、Firebase Storage、Cloud Functions、firebase_analytics は使用していません。</p>
+      <p>本アプリには Firebase のコンポーネントが含まれます。</p>
+      <ul>
+        <li><strong>Firebase Authentication</strong>：認証機能のため識別子（User ID）を生成または保存する場合があります。目的はアプリ機能の提供（App Functionality）です。本アプリは<strong>独自のログイン UI を提供しておらず</strong>、ユーザーが操作して認証情報を送信する導線もありません。</li>
+        <li><strong>Firebase Installations 等</strong>：SDK バージョン、OS、アプリ情報などの技術的診断情報（Other Diagnostic Data）を処理する場合があります。これらはサービス品質の維持および利用状況の分析目的で処理される場合があり、広告、クロスアプリトラッキング、データブローカーへの提供には使用しません。</li>
+      </ul>
+      <p>Firestore、Firebase Storage、Cloud Functions、firebase_analytics、Firebase Crashlytics、Performance Monitoring は使用していません。</p>
 
       <h3>6.4 単語読み上げ（TTS）</h3>
       <p>語彙の読み上げには端末 OS の TTS 機能を利用することがあります。読み上げ処理は端末上で行われ、運営者がユーザーの声を収集するものではありません。</p>
 
       <h2>7. 第三者提供</h2>
       <p>運営者は、法令に基づく場合を除き、問い合わせメール等であなたから受領した個人情報を、本人の同意なく第三者に販売・提供しません。</p>
-      <p>課金処理のために Apple および RevenueCat が各自のサービスとして情報を処理する場合があります。各社の取扱いは各社のポリシーに従います。</p>
+      <p>課金処理およびアプリ基盤のために、Apple、RevenueCat、Firebase（Google）が各自のサービスとして情報を処理する場合があります。各社の取扱いは各社のポリシーに従います。</p>
+      <p>本アプリは、広告トラッキングおよびクロスアプリでの追跡を目的としたデータ利用を行いません。</p>
 
       <h2>8. 音声・録音データ</h2>
       <ul>
@@ -156,7 +164,7 @@
       <h2>16. 制定日・改定日</h2>
       <table>
         <tr><th>制定日</th><td>2026年6月20日</td></tr>
-        <tr><th>最終改定日</th><td>2026年7月14日</td></tr>
+        <tr><th>最終改定日</th><td>2026年7月15日</td></tr>
       </table>
     </div>
     <footer>
