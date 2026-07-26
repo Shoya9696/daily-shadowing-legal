@@ -1,6 +1,7 @@
-# Daily Shadowing Legal Pages
+# デイシャド Legal Pages
 
-This repository hosts the public legal and support pages for the Daily Shadowing app.
+This repository hosts the public legal and support pages for the デイシャド app
+(formerly Daily Shadowing).
 
 - Support (`support.html`)
 - Privacy Policy (`privacy-policy.html`)
@@ -19,9 +20,9 @@ No app source code, secrets, Firebase files, or audio assets are stored here.
 
 ---
 
-# Daily Shadowing 法務・サポートページ
+# デイシャド 法務・サポートページ
 
-Daily Shadowing アプリのサポート案内・プライバシーポリシー・利用規約・特定商取引法に基づく表記を公開するためのリポジトリです。
+デイシャド（旧称：Daily Shadowing）アプリのサポート案内・プライバシーポリシー・利用規約・特定商取引法に基づく表記を公開するためのリポジトリです。
 
 - サポート（`support.html`）
 - プライバシーポリシー（`privacy-policy.html`）
